@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "prebuild": {
+      "cache": true,
+      "outputs": ["**/dist/**"],
+      "dependsOn": []
+    },
+    "build": {
+      "cache": true,
+      "inputs": ["src/**"],
+      "outputs": ["dist/**"],
+      "dependsOn": ["prebuild", "^build"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "remoteCache": {
+    "enabled": true
+  }
+}

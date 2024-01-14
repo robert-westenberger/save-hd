@@ -1,0 +1,21 @@
+{
+  "description": "",
+  "scripts": {
+    "changeset": "changeset",
+    "build": "FORCE_COLOR=1 turbo build",
+    "dev": "FORCE_COLOR=1 turbo dev --concurrency 1000",
+    "lint": "FORCE_COLOR=1 turbo lint",
+    "publish-packages": "FORCE_COLOR=1 turbo run build && changeset version && changeset publish",
+    "graph": "FORCE_COLOR=1 turbo build --graph=deps.png",
+    "profile": "FORCE_COLOR=1 turbo build --no-cache --force --profile=profile2.json",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "prettier": "^3.1.0",
+    "turbo": "latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,3 @@
+VITE_WEB_EXT_CHROMIUM_BINARY_PATH="/Path/To/Chromium/Binary"
+VITE_WEB_EXT_CHROMIUM_PROFILE_PATH="/Path/To/Chromium/Profile"
+VITE_WEB_EXT_START_URL="https://example.org/"
